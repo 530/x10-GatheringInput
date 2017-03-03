@@ -3,12 +3,24 @@
 
 <html>
 <head>
-<title>Page Title</title>
+<meta charset="UTF-8">
+<title>Gathering Input</title>
+  
+	<script lang="javascript">
+  
+	function get_Fname(){
+		var full_name;
+    full_name = document.getElementById("first").value+" "+ document.getElementById("last").value;
+    document.getElementById("message").innerHTML = full_name;
+  }
+	</script>
+
 </head>
+
 <body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
+	<input type="text" id="first">
+  <input type="text" id="last"><br>
+  <button type="button" id="doneButton" onclick="get_Fname();">Done</button>
+  <p id="message"></p>
 </body>
 </html>
